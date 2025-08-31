@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludoteca", "Ludoteca\Ludoteca.csproj", "{8EA8DCD2-284E-E681-31CF-B6AC7C0797BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EA8DCD2-284E-E681-31CF-B6AC7C0797BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EA8DCD2-284E-E681-31CF-B6AC7C0797BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EA8DCD2-284E-E681-31CF-B6AC7C0797BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EA8DCD2-284E-E681-31CF-B6AC7C0797BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E55DD4D7-7D92-4F04-8F1C-BC6611CE2E3F}
+	EndGlobalSection
+EndGlobal
