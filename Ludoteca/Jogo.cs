@@ -7,5 +7,4 @@ public class Jogo
     public bool Emprestado { get; private set; } = false;
 
     public decimal ValorDoAluguel { get; set; }
-
 }
