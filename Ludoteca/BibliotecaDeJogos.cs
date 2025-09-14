@@ -1,4 +1,4 @@
-namespace Ludoteca;
+using Ludoteca;
 
 using System.Text.Json;
 
