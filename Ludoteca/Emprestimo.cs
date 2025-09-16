@@ -5,109 +5,109 @@ using System.Globalization;
 using System.Linq;
 using System.Text.Json;
 
-namespace Emprestimo
+
+public class Emprestimo
 {
-    public class Emprestimo
+
+    public Emprestimo(BibliotecaDeJogos biblioteca, ListaDeMembros lista)
     {
-        public DateTime DataEmprestimo { get; set; }
-        public DateTime? DataDevolucao { get; set; }
+        bibliotecaDeJogos = biblioteca;
+        listaDeMembros = lista;
+    }
 
-        public void emprestar(string nomeJogo, Membro membroPessoa, BibliotecaDeJogos biblioteca, string CaminhoArquivo, ListaDeMembros lista)
+    private BibliotecaDeJogos bibliotecaDeJogos;
+    private ListaDeMembros listaDeMembros;
+
+    public void Emprestar()
+    {
+        bibliotecaDeJogos.ListarJogos();
+        int jogoIndx = Utilitarios.EscolherOpcao(bibliotecaDeJogos.ListaDeJogos.Count, "Qual jogo será emprestado?");
+
+        listaDeMembros.ListarMembros();
+        int membroIndx = Utilitarios.EscolherOpcao(listaDeMembros.MembrosCadastrados.Count, "Quem está pegando o jogo?");
+
+
+        Jogo jogo = bibliotecaDeJogos.ListaDeJogos[jogoIndx];
+        Membro membro = listaDeMembros.MembrosCadastrados[membroIndx];
+
+        try
         {
-            var jogo = biblioteca.ListaDeJogos.FirstOrDefault(j => j.Nome == nomeJogo);
-            if (jogo == null)
-            {
-                Console.WriteLine("O jogo não foi encontrado em nossa LUDOTECA.");
-                return;
-            }
-
-            var integrante = lista.membros.FirstOrDefault(m => m.NomePessoa == membroPessoa.NomePessoa);
-            if (integrante == null)
-            {
-                Console.WriteLine("Membro não cadastrado na lista de membros.");
-                return;
-            }
-
-            if (!jogo.Emprestado)
-            {
-                jogo.Emprestado = true;
-                DataEmprestimo = DateTime.Now;
-                jogo.MembroQuePegou = integrante;
-
-                string json = JsonSerializer.Serialize(biblioteca.ListaDeJogos, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(CaminhoArquivo, json);
-
-                Console.WriteLine("Jogo emprestado com sucesso");
-            }
-            else
-            {
-                Console.WriteLine("Esse jogo já foi emprestado...");
-            }
+            jogo.EmprestarPara(membro);
         }
-
-        public void Devolver(string nomeJogo, BibliotecaDeJogos biblioteca, string CaminhoArquivo, Membro membro, ListaDeMembros lista)
+        catch (Exception erro)
         {
-            var jogo = biblioteca.ListaDeJogos.FirstOrDefault(j => j.Nome == nomeJogo);
-            if (jogo == null)
-            {
-                Console.WriteLine("Jogo não encontrado");
-                return;
-            }
-
-            var integrante = lista.membros.FirstOrDefault(m => m.NomePessoa == membro.NomePessoa);
-            if (integrante == null)
-            {
-                Console.WriteLine("Membro não encontrado no cadastro");
-                return;
-            }
-
-            if (jogo.MembroQuePegou == null || jogo.MembroQuePegou.NomePessoa != integrante.NomePessoa)
-            {
-                Console.WriteLine("Esse jogo não foi emprestado para esse membro");
-                return;
-            }
-
-            if (jogo.Emprestado)
-            {
-                jogo.Emprestado = false;
-                DataDevolucao = DateTime.Now;
-                jogo.MembroQuePegou = null;
-
-                string json = JsonSerializer.Serialize(biblioteca.ListaDeJogos, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(CaminhoArquivo, json);
-
-                decimal valor = GerarMulta(jogo.ValorDoAluguel);
-                GerarRelatorio(nomeJogo, integrante.NomePessoa, valor);
-
-                Console.WriteLine("Obrigado por devolver o jogo");
-            }
-            else
-            {
-                Console.WriteLine("Esse jogo já foi devolvido");
-            }
-        }
-
-        public decimal GerarMulta(decimal ValorDoAluguel)
-        {
-            if (!DataDevolucao.HasValue)
-                throw new InvalidOperationException("Esse jogo ainda não foi devolvido");
-
-            var DiasDeAluguel = (DataDevolucao.Value - DataEmprestimo).TotalDays;
-            if (DiasDeAluguel <= 10)
-                return ValorDoAluguel;
-
-            decimal DiasDeAtraso = (decimal)DiasDeAluguel - 10;
-            decimal Valormulta = (DiasDeAtraso * 1.50m) + ValorDoAluguel;
-            return Valormulta;
-        }
-
-        public void GerarRelatorio(string nomeJogo, string MembroQuePegou, decimal Valormulta)
-        {
-            string linha = $"O jogo {nomeJogo} foi devolvido por {MembroQuePegou} pagando o valor de R$ {Valormulta.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))} no dia {DataDevolucao?.ToString("dd/MM/yyyy HH:mm")}\n";
-            File.AppendAllText("relatorio.txt", linha);
-
-            Console.WriteLine("RELATÓRIO GERADO:");
-            Console.WriteLine(linha);
+            Console.WriteLine($"Erro inesperado | {erro.Message}");
         }
     }
+
+    public void Devolver()
+    {
+
+        bibliotecaDeJogos.ListarJogos();
+        int jogoIndx = Utilitarios.EscolherOpcao(bibliotecaDeJogos.ListaDeJogos.Count, "Qual jogo está sendo devolvido?");
+
+        Jogo jogo = bibliotecaDeJogos.ListaDeJogos[jogoIndx];
+
+        try
+        {
+
+            jogo.Devolver();
+        }
+        catch (Exception erro)
+        {
+            Console.WriteLine($"Erro inesperado | {erro.Message}");
+        }
+    }
+
+    public decimal GerarMulta(Jogo jogo)
+    {
+
+        if (jogo.DataDevolucao == jogo.DataDevolucaoEsperada)
+        {
+            decimal valorMulta = 0;
+            return valorMulta;
+        }
+        else
+        {
+            if (jogo.DataDevolucao == null)
+            {
+                Console.WriteLine($"{jogo.Nome} ainda não foi devolvido");
+                return 0;
+            }
+            else
+            {
+                TimeSpan diferenca = jogo.DataDevolucao.Value - jogo.DataEmprestimo.Value;
+
+                decimal dias = (decimal)diferenca.TotalDays;
+
+                decimal valorMulta = dias * 5;
+
+                return valorMulta;
+            }
+        }
+    }
+
+    public void GerarRelatorio(Jogo jogo, Membro membro)
+    {
+        decimal valorMulta = GerarMulta(jogo);
+
+        string texto = 
+            "-------------------------\n" +
+            "Relatório do Empréstimo:\n" +
+            $"Jogo emprestado: {jogo.Nome}\n" +
+            $"Quem pegou: {membro.NomePessoa}\n" +
+            $"Data do empréstimo: {jogo.DataEmprestimo?.ToString("dd/MM/yyyy HH:mm") ?? "Não registrado"}\n" +
+            $"Data da devolução: {jogo.DataDevolucao?.ToString("dd/MM/yyyy HH:mm") ?? "Não devolvido"}\n" +
+            $"Valor do aluguel: R${jogo.ValorDoAluguel.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))}\n" +
+            $"Valor da multa: R${valorMulta.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))}\n" +
+            $"Total a pagar: R${(jogo.ValorDoAluguel + valorMulta).ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))}\n" +
+            "-------------------------\n";
+
+        File.AppendAllText("relatorio.txt", texto);
+
+        Console.WriteLine("RELATÓRIO GERADO:");
+        Console.WriteLine(texto);
+    }
+
 }
+

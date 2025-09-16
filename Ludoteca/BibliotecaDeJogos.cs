@@ -70,6 +70,7 @@ public class BibliotecaDeJogos
 
         ListaDeJogos.Add(jogo);
         Console.WriteLine($"{jogo.Nome} adicionamo com sucesso!");
+        Salvar();
     }
 
     public void RemoverJogo()

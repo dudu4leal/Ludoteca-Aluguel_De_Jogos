@@ -7,14 +7,10 @@ namespace Ludoteca
 {
     public class ListaDeMembros
     {
-        public List<Membro> membros;
+        public List<Membro> MembrosCadastrados { get; set; } = new List<Membro>();
 
-        public const string CaminhoArquivo = "listaDeMembros.json";
+        public const string CaminhoArquivo = "listaDeMembrosCadastrados.json";
 
-        public ListaDeMembros()
-        {
-            membros = new List<Membro>();
-        }
 
         public void CadastrarMembro()
         {
@@ -26,49 +22,72 @@ namespace Ludoteca
             Console.WriteLine($"Digite o CPF do {novo.NomePessoa}: ");
             novo.Cpf = Console.ReadLine();
 
-            membros.Add(novo);
+            MembrosCadastrados.Add(novo);
+            Console.WriteLine("Membro cadastrado com sucesso!");
+            SalvarEmJson();
         }
 
-        public bool RemoverMembro(string nome)
+        public void RemoverMembro()
         {
-            var membro = BuscarMembro(nome);
-            if (membro != null)
+            if (MembrosCadastrados.Count == 0)
             {
-                membros.Remove(membro);
-                SalvarEmJson(CaminhoArquivo);
-                return true;
+                Console.WriteLine("Não há MembrosCadastrados cadastrados");
+                return;
             }
-            return false;
+
+            Console.WriteLine("Qual membro deseja remover?");
+            ListarMembros();
+
+            while (true)
+            {
+                try
+                {
+
+                    string opcao = Console.ReadLine();
+                    int opcaoInt;
+
+                    if (!int.TryParse(opcao, out opcaoInt))
+                    {
+                        if (opcaoInt <= MembrosCadastrados.Count && opcaoInt > 0)
+                        {
+                            MembrosCadastrados.RemoveAt(opcaoInt - 1);
+                            Console.WriteLine("Membro removido com sucesso!");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Digite uma opção válida");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Digite um número inteiro válido");
+                    }
+
+                }
+                catch (Exception erro)
+                {
+                    Console.WriteLine($"Erro inesperado | {erro.Message}");
+                }
+            }
         }
 
-        public Membro BuscarMembro(string nome)
+        public void SalvarEmJson()
         {
-            if (membros == null)
-            {
-                return null;
-            }
-            else
-            {
-                return membros.Find(m => m.NomePessoa == nome);
-            }
-        }
-
-        public void SalvarEmJson(string caminho)
-        {
-            string json = JsonSerializer.Serialize(membros, new JsonSerializerOptions { WriteIndented = true });
+            string json = JsonSerializer.Serialize(MembrosCadastrados, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(CaminhoArquivo, json);
 
-            Console.WriteLine("Membros salvos com sucesso!");
+            Console.WriteLine("MembrosCadastrados salvos com sucesso!");
         }
 
-        public void CarregarDeJson(string caminho)
+        public void CarregarDeJson()
         {
             if (File.Exists(CaminhoArquivo))
             {
                 try
                 {
                     string json = File.ReadAllText(CaminhoArquivo);
-                    membros = JsonSerializer.Deserialize<List<Membro>>(json) ?? new List<Membro>();
+                    MembrosCadastrados = JsonSerializer.Deserialize<List<Membro>>(json) ?? new List<Membro>();
 
 
 
@@ -76,15 +95,31 @@ namespace Ludoteca
                 catch (Exception erro)
                 {
                     Console.WriteLine($"Algum erro aconteceu | {erro.Message}");
-                    membros = new List<Membro>();
+                    MembrosCadastrados = new List<Membro>();
                 }
             }
             else
             {
-                Console.WriteLine("Não existe uma lista de membros. Criando nova lista.");
-                membros = new List<Membro>();
+                Console.WriteLine("Não existe uma lista de MembrosCadastrados. Criando nova lista.");
+                MembrosCadastrados = new List<Membro>();
 
             }
         }
+
+        public void ListarMembros()
+        {
+            if ((MembrosCadastrados.Count) == 0)
+            {
+                Console.WriteLine("Não há MembrosCadastrados");
+            }
+            else
+            {
+                for (int i = 0; i < MembrosCadastrados.Count; i++)
+                {
+                    Console.WriteLine($"[{i+1}] {MembrosCadastrados[i].NomePessoa}");
+                }
+            }
+        }
+
     }
 }

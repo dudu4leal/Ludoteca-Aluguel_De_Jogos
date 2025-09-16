@@ -1,0 +1,10 @@
+-------------------------
+Relatório do Empréstimo:
+Jogo emprestado: FIFA 25
+Quem pegou: Eduardo Leal
+Data do empréstimo: 16/09/2025 18:39
+Data da devolução: Não devolvido
+Valor do aluguel: R$50,00
+Valor da multa: R$0,00
+Total a pagar: R$50,00
+-------------------------

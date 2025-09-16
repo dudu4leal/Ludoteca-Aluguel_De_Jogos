@@ -1,0 +1,15 @@
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\bin\Debug\net9.0\Ludoteca.exe
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\bin\Debug\net9.0\Ludoteca.deps.json
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\bin\Debug\net9.0\Ludoteca.runtimeconfig.json
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\bin\Debug\net9.0\Ludoteca.dll
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\bin\Debug\net9.0\Ludoteca.pdb
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\obj\Debug\net9.0\Ludoteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\obj\Debug\net9.0\Ludoteca.AssemblyInfoInputs.cache
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\obj\Debug\net9.0\Ludoteca.AssemblyInfo.cs
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\obj\Debug\net9.0\Ludoteca.csproj.CoreCompileInputs.cache
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\obj\Debug\net9.0\Ludoteca.sourcelink.json
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\obj\Debug\net9.0\Ludoteca.dll
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\obj\Debug\net9.0\refint\Ludoteca.dll
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\obj\Debug\net9.0\Ludoteca.pdb
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\obj\Debug\net9.0\Ludoteca.genruntimeconfig.cache
+C:\Users\dudsl\Desktop\Ludoteca-Aluguel_De_Jogos\Ludoteca\obj\Debug\net9.0\ref\Ludoteca.dll

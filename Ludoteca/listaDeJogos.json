@@ -1,0 +1,11 @@
+[
+  {
+    "Nome": "FIFA 25",
+    "Emprestado": false,
+    "ValorDoAluguel": 50,
+    "MembroQuePegou": null,
+    "DataEmprestimo": null,
+    "DataDevolucaoEsperada": null,
+    "DataDevolucao": null
+  }
+]
