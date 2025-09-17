@@ -4,8 +4,55 @@
     "Emprestado": false,
     "ValorDoAluguel": 50,
     "MembroQuePegou": null,
-    "DataEmprestimo": null,
-    "DataDevolucaoEsperada": null,
-    "DataDevolucao": null
+    "UltimoMembroPegou": {
+      "NomePessoa": "Eduardo Leal",
+      "Cpf": "198.064.037.89"
+    },
+    "DataEmprestimo": "2025-09-17T15:55:23.8181416-03:00",
+    "UltimoEmprestimo": "2025-09-17T15:55:23.8181416-03:00",
+    "DataDevolucaoEsperada": "2025-09-24T15:55:23.8181416-03:00",
+    "DataDevolucao": "2025-09-17T15:55:41.4574447-03:00"
+  },
+  {
+    "Nome": "Rainbow Six Siege",
+    "Emprestado": false,
+    "ValorDoAluguel": 60,
+    "MembroQuePegou": null,
+    "UltimoMembroPegou": {
+      "NomePessoa": "Arthur",
+      "Cpf": "911.041.577.72"
+    },
+    "DataEmprestimo": "2025-09-17T15:44:40.9081162-03:00",
+    "UltimoEmprestimo": "2025-09-17T15:44:40.9081162-03:00",
+    "DataDevolucaoEsperada": "2025-09-24T15:44:40.9081162-03:00",
+    "DataDevolucao": "2025-09-17T15:45:15.6863143-03:00"
+  },
+  {
+    "Nome": "Spider Man PS4",
+    "Emprestado": false,
+    "ValorDoAluguel": 80,
+    "MembroQuePegou": null,
+    "UltimoMembroPegou": {
+      "NomePessoa": "Pedro Henrique",
+      "Cpf": "111.111.111-11"
+    },
+    "DataEmprestimo": "2025-09-17T15:44:49.220237-03:00",
+    "UltimoEmprestimo": "2025-09-17T15:44:49.220237-03:00",
+    "DataDevolucaoEsperada": "2025-09-24T15:44:49.220237-03:00",
+    "DataDevolucao": "2025-09-17T15:45:58.6342853-03:00"
+  },
+  {
+    "Nome": "GTA V",
+    "Emprestado": false,
+    "ValorDoAluguel": 90,
+    "MembroQuePegou": null,
+    "UltimoMembroPegou": {
+      "NomePessoa": "Pedro Freitas",
+      "Cpf": "222.222.222-22"
+    },
+    "DataEmprestimo": "2025-09-17T15:50:36.15553-03:00",
+    "UltimoEmprestimo": "2025-09-17T15:50:36.15553-03:00",
+    "DataDevolucaoEsperada": "2025-09-24T15:50:36.15553-03:00",
+    "DataDevolucao": "2025-09-17T15:50:56.922898-03:00"
   }
 ]

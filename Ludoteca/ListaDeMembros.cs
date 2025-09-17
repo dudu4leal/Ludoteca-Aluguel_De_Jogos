@@ -16,10 +16,10 @@ namespace Ludoteca
         {
             Membro novo = new Membro();
 
-            Console.WriteLine("Digite o nome do membro: ");
+            Console.WriteLine("Digite o nome do(a) membro: ");
             novo.NomePessoa = Console.ReadLine();
 
-            Console.WriteLine($"Digite o CPF do {novo.NomePessoa}: ");
+            Console.WriteLine($"Digite o CPF do(a) {novo.NomePessoa}: ");
             novo.Cpf = Console.ReadLine();
 
             MembrosCadastrados.Add(novo);
@@ -46,7 +46,7 @@ namespace Ludoteca
                     string opcao = Console.ReadLine();
                     int opcaoInt;
 
-                    if (!int.TryParse(opcao, out opcaoInt))
+                    if (int.TryParse(opcao, out opcaoInt))
                     {
                         if (opcaoInt <= MembrosCadastrados.Count && opcaoInt > 0)
                         {

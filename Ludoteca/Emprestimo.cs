@@ -33,6 +33,8 @@ public class Emprestimo
         try
         {
             jogo.EmprestarPara(membro);
+            bibliotecaDeJogos.Salvar();
+            listaDeMembros.SalvarEmJson();
         }
         catch (Exception erro)
         {
@@ -52,6 +54,8 @@ public class Emprestimo
         {
 
             jogo.Devolver();
+            bibliotecaDeJogos.Salvar();
+            listaDeMembros.SalvarEmJson();
         }
         catch (Exception erro)
         {
@@ -61,49 +65,54 @@ public class Emprestimo
 
     public decimal GerarMulta(Jogo jogo)
     {
-
-        if (jogo.DataDevolucao == jogo.DataDevolucaoEsperada)
+        if (jogo.DataEmprestimo == null || jogo.DataDevolucaoEsperada == null || jogo.DataDevolucao == null)
         {
-            decimal valorMulta = 0;
-            return valorMulta;
+            return 0;
         }
-        else
+
+        TimeSpan diferenca = jogo.DataDevolucao.Value - jogo.DataDevolucaoEsperada.Value;
+
+        decimal diasAtraso = (decimal)diferenca.TotalDays;
+
+        if (diasAtraso <= 0)
         {
-            if (jogo.DataDevolucao == null)
-            {
-                Console.WriteLine($"{jogo.Nome} ainda não foi devolvido");
-                return 0;
-            }
-            else
-            {
-                TimeSpan diferenca = jogo.DataDevolucao.Value - jogo.DataEmprestimo.Value;
-
-                decimal dias = (decimal)diferenca.TotalDays;
-
-                decimal valorMulta = dias * 5;
-
-                return valorMulta;
-            }
+            return 0;
         }
+
+        decimal valorMulta = diasAtraso * 5;
+        return valorMulta;
     }
 
     public void GerarRelatorio(Jogo jogo, Membro membro)
     {
         decimal valorMulta = GerarMulta(jogo);
 
-        string texto = 
-            "-------------------------\n" +
-            "Relatório do Empréstimo:\n" +
+        string caminho = "Relatorio_" + jogo.Nome + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".txt";
+
+
+        string texto =
+            "------------Relatório do Empréstimo-------------\n" +
+            $"\n" +
             $"Jogo emprestado: {jogo.Nome}\n" +
-            $"Quem pegou: {membro.NomePessoa}\n" +
-            $"Data do empréstimo: {jogo.DataEmprestimo?.ToString("dd/MM/yyyy HH:mm") ?? "Não registrado"}\n" +
+            $"Quem pegou: {jogo.UltimoMembroPegou.NomePessoa}\n" +
+            $"\n" +
+            $"-----------------------------------------------\n" +
+            $"\n" +
+            $"Data do empréstimo: {jogo.UltimoEmprestimo?.ToString("dd/MM/yyyy HH:mm") ?? "Não registrado"}\n" +
             $"Data da devolução: {jogo.DataDevolucao?.ToString("dd/MM/yyyy HH:mm") ?? "Não devolvido"}\n" +
+            $"\n" +
+            $"-----------------------------------------------\n" +
+            $"\n" +
             $"Valor do aluguel: R${jogo.ValorDoAluguel.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))}\n" +
             $"Valor da multa: R${valorMulta.ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))}\n" +
+            $"\n" +
+            $"-----------------------------------------------\n" +
+            $"\n" +
             $"Total a pagar: R${(jogo.ValorDoAluguel + valorMulta).ToString("F2", CultureInfo.GetCultureInfo("pt-BR"))}\n" +
-            "-------------------------\n";
+            $"\n" +
+            $"-----------------------------------------------\n";
 
-        File.AppendAllText("relatorio.txt", texto);
+        File.WriteAllText(caminho, texto);
 
         Console.WriteLine("RELATÓRIO GERADO:");
         Console.WriteLine(texto);

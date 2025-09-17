@@ -16,7 +16,7 @@ while (true)
     Console.WriteLine("[1] Cadastrar jogo");
     Console.WriteLine("[2] Cadastrar membro");
     Console.WriteLine("[3] Listar jogos");
-    Console.WriteLine("[4] Embrestar jogo");
+    Console.WriteLine("[4] Emprestar jogo");
     Console.WriteLine("[5] Devolver jogo");
     Console.WriteLine("[6] Gerar relatório");
     Console.WriteLine("[0] Sair");
@@ -61,9 +61,9 @@ while (true)
         int opcaoRelatorio = Utilitarios.EscolherOpcao(bibliotecaDeJogos.ListaDeJogos.Count, "Deseja gerar relatório de qual jogo?");
         Jogo jogo = bibliotecaDeJogos.ListaDeJogos[opcaoRelatorio];
 
-        if (jogo.MembroQuePegou != null)
+        if (jogo.UltimoMembroPegou != null)
         {
-            emprestimo.GerarRelatorio(jogo, jogo.MembroQuePegou);
+            emprestimo.GerarRelatorio(jogo, jogo.UltimoMembroPegou);
         }
         else
         {
@@ -73,7 +73,10 @@ while (true)
     }
     else if (intOpcao == 0)
     {
+        bibliotecaDeJogos.Salvar();
+        listaDeMembros.SalvarEmJson();
         break;
+        
     }
 }
 

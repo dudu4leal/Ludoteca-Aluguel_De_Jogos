@@ -69,7 +69,7 @@ public class BibliotecaDeJogos
         }
 
         ListaDeJogos.Add(jogo);
-        Console.WriteLine($"{jogo.Nome} adicionamo com sucesso!");
+        Console.WriteLine($"{jogo.Nome} adicionado com sucesso!");
         Salvar();
     }
 
@@ -134,6 +134,8 @@ public class BibliotecaDeJogos
             {
                 Console.WriteLine($"[{i + 1}] {ListaDeJogos[i].Nome}");
             }
+
+            Console.WriteLine("");
 
         }
 
