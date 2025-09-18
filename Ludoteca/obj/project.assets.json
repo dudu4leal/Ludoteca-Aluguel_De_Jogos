@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dudsl\\Desktop\\Ludoteca-Aluguel_De_Jogos\\Ludoteca\\Ludoteca.csproj",
+      "projectUniqueName": "C:\\Users\\dudsl\\Documents\\GitHub\\Ludoteca-Aluguel_De_Jogos\\Ludoteca\\Ludoteca.csproj",
       "projectName": "Ludoteca",
-      "projectPath": "C:\\Users\\dudsl\\Desktop\\Ludoteca-Aluguel_De_Jogos\\Ludoteca\\Ludoteca.csproj",
+      "projectPath": "C:\\Users\\dudsl\\Documents\\GitHub\\Ludoteca-Aluguel_De_Jogos\\Ludoteca\\Ludoteca.csproj",
       "packagesPath": "C:\\Users\\dudsl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dudsl\\Desktop\\Ludoteca-Aluguel_De_Jogos\\Ludoteca\\obj\\",
+      "outputPath": "C:\\Users\\dudsl\\Documents\\GitHub\\Ludoteca-Aluguel_De_Jogos\\Ludoteca\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

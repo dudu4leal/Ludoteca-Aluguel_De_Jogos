@@ -47,12 +47,12 @@
     "ValorDoAluguel": 90,
     "MembroQuePegou": null,
     "UltimoMembroPegou": {
-      "NomePessoa": "Pedro Freitas",
-      "Cpf": "222.222.222-22"
+      "NomePessoa": "Eduardo Leal",
+      "Cpf": "198.064.037.89"
     },
-    "DataEmprestimo": "2025-09-17T15:50:36.15553-03:00",
-    "UltimoEmprestimo": "2025-09-17T15:50:36.15553-03:00",
-    "DataDevolucaoEsperada": "2025-09-24T15:50:36.15553-03:00",
-    "DataDevolucao": "2025-09-17T15:50:56.922898-03:00"
+    "DataEmprestimo": "2025-09-18T18:18:14.4673551-03:00",
+    "UltimoEmprestimo": "2025-09-18T18:18:14.4673551-03:00",
+    "DataDevolucaoEsperada": "2025-09-25T18:18:14.4673551-03:00",
+    "DataDevolucao": "2025-09-18T18:18:43.307378-03:00"
   }
 ]
