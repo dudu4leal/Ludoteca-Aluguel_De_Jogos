@@ -24,7 +24,7 @@ public class Jogo
     {
         if (Emprestado == true)
         {
-            Console.WriteLine($"O jogo {Nome} já está emprestado");
+            Console.WriteLine($"O jogo {Nome} já está emprestado\n");
         }
         else
         {
@@ -35,7 +35,7 @@ public class Jogo
             DataEmprestimo = DateTime.Now;
             DataDevolucaoEsperada = DataEmprestimo.Value.AddDays(7);
             DataDevolucao = null;
-            Console.WriteLine($"Jogo {Nome} emprestado para {MembroQuePegou.NomePessoa}");
+            Console.WriteLine($"Jogo {Nome} emprestado para {MembroQuePegou.NomePessoa}\n");
         }
     }
 
@@ -43,7 +43,7 @@ public class Jogo
     {
         if (Emprestado == false)
         {
-            Console.WriteLine($"O jogo {Nome} não está emprestado");
+            Console.WriteLine($"O jogo {Nome} não está emprestado\n");
         }
         else
         {
@@ -55,7 +55,7 @@ public class Jogo
             Emprestado = false;
             MembroQuePegou = null;
 
-            Console.WriteLine($"Jogo {Nome} devolvido por {UltimoMembroPegou?.NomePessoa}");
+            Console.WriteLine($"Jogo {Nome} devolvido por {UltimoMembroPegou?.NomePessoa}\n");
         }
     }
 }

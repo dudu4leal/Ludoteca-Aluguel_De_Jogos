@@ -114,7 +114,7 @@ public class Emprestimo
 
         File.WriteAllText(caminho, texto);
 
-        Console.WriteLine("RELATÓRIO GERADO:");
+        Console.WriteLine("\nRELATÓRIO GERADO:\n");
         Console.WriteLine(texto);
     }
 

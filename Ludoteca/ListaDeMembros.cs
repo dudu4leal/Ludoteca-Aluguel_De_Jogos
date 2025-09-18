@@ -16,10 +16,10 @@ namespace Ludoteca
         {
             Membro novo = new Membro();
 
-            Console.WriteLine("Digite o nome do(a) membro: ");
+            Console.WriteLine("\nDigite o nome do(a) membro: ");
             novo.NomePessoa = Console.ReadLine();
 
-            Console.WriteLine($"Digite o CPF do(a) {novo.NomePessoa}: ");
+            Console.WriteLine($"\nDigite o CPF do(a) {novo.NomePessoa}: ");
             novo.Cpf = Console.ReadLine();
 
             MembrosCadastrados.Add(novo);
@@ -77,7 +77,7 @@ namespace Ludoteca
             string json = JsonSerializer.Serialize(MembrosCadastrados, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(CaminhoArquivo, json);
 
-            Console.WriteLine("MembrosCadastrados salvos com sucesso!");
+            Console.WriteLine("MembrosCadastrados salvos com sucesso!\n");
         }
 
         public void CarregarDeJson()

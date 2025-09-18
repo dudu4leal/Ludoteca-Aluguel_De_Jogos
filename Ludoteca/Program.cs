@@ -13,6 +13,8 @@ Console.WriteLine("==LUDOTECA==");
 
 while (true)
 {
+    Console.Clear();
+    
     Console.WriteLine("[1] Cadastrar jogo");
     Console.WriteLine("[2] Cadastrar membro");
     Console.WriteLine("[3] Listar jogos");
@@ -21,7 +23,7 @@ while (true)
     Console.WriteLine("[6] Gerar relatório");
     Console.WriteLine("[0] Sair");
 
-    Console.WriteLine("Selecione sua opção: ");
+    Console.WriteLine("\nSelecione sua opção: ");
     string opcao = Console.ReadLine();
     int intOpcao;
 
@@ -78,6 +80,10 @@ while (true)
         break;
         
     }
+
+    Console.WriteLine("Pressione qualquer teclapara continuar...");
+    Console.ReadKey();
+
 }
 
 

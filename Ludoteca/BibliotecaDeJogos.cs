@@ -50,12 +50,12 @@ public class BibliotecaDeJogos
 
         Jogo jogo = new Jogo();
 
-        Console.WriteLine("Digite o nome do novo jogo: ");
+        Console.WriteLine("\nDigite o nome do novo jogo: ");
         jogo.Nome = Console.ReadLine();
 
         while (true)
         {
-            Console.WriteLine("Digite o valor do seu aluguel: ");
+            Console.WriteLine("\nDigite o valor do seu aluguel: ");
             if (decimal.TryParse(Console.ReadLine(), out decimal valor))
             {
                 jogo.ValorDoAluguel = valor;
@@ -130,11 +130,15 @@ public class BibliotecaDeJogos
         else
         {
 
+            Console.WriteLine("");
+            Console.WriteLine("----------");
+
             for (int i = 0; i < (ListaDeJogos.Count); i++)
             {
                 Console.WriteLine($"[{i + 1}] {ListaDeJogos[i].Nome}");
             }
 
+            Console.WriteLine("----------");
             Console.WriteLine("");
 
         }
