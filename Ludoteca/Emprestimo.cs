@@ -87,7 +87,14 @@ public class Emprestimo
     {
         decimal valorMulta = GerarMulta(jogo);
 
-        string caminho = "Relatorio_" + jogo.Nome + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".txt";
+        string pasta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "RelatoriosJogos");
+        Directory.CreateDirectory(pasta);
+
+        string nomeJogo = string.Concat(jogo.Nome.Split(Path.GetInvalidFileNameChars()));
+
+        string nomeDoArquivo = Path.Combine($"Relatorio_{jogo.Nome}_{DateTime.Now:yyyyMMdd_HHmmss}.txt");
+
+        string caminhoCompleto = Path.Combine(pasta, nomeDoArquivo);
 
 
         string texto =
@@ -112,7 +119,17 @@ public class Emprestimo
             $"\n" +
             $"-----------------------------------------------\n";
 
-        File.WriteAllText(caminho, texto);
+
+        try
+        {
+            File.WriteAllText(caminhoCompleto, texto);
+            Console.WriteLine($"Relatório gerado e salvo em: {caminhoCompleto}\n");
+        }
+        catch (Exception erro)
+        {
+            Console.WriteLine($"Erro ao gerar relatório | {erro.Message}");
+        }
+
 
         Console.WriteLine("\nRELATÓRIO GERADO:\n");
         Console.WriteLine(texto);
