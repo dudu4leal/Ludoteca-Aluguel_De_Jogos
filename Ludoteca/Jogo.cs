@@ -30,9 +30,9 @@ public class Jogo
         {
             Emprestado = true;
             MembroQuePegou = membro;
+            DataEmprestimo = DateTime.Now;
             UltimoEmprestimo = DataEmprestimo;
             UltimoMembroPegou = membro;
-            DataEmprestimo = DateTime.Now;
             DataDevolucaoEsperada = DataEmprestimo.Value.AddDays(7);
             DataDevolucao = null;
             Console.WriteLine($"Jogo {Nome} emprestado para {MembroQuePegou.NomePessoa}\n");

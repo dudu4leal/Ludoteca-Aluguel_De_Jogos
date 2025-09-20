@@ -14,7 +14,7 @@ Console.WriteLine("==LUDOTECA==");
 while (true)
 {
     Console.Clear();
-    
+
     Console.WriteLine("[1] Cadastrar jogo");
     Console.WriteLine("[2] Cadastrar membro");
     Console.WriteLine("[3] Listar jogos");
@@ -34,33 +34,57 @@ while (true)
     }
 
 
+    if (intOpcao != 0)
+    {
+        Console.Clear();
+    }
+
+
     if (intOpcao == 1)
     {
         bibliotecaDeJogos.AdicionarJogo();
+
+        Console.WriteLine("Pressione qualquer tecla para continuar...");
+        Console.ReadKey();
     }
     else if (intOpcao == 2)
     {
         listaDeMembros.CadastrarMembro();
+
+        Console.WriteLine("Pressione qualquer tecla para continuar...");
+        Console.ReadKey();
     }
     else if (intOpcao == 3)
     {
         bibliotecaDeJogos.ListarJogos();
+
+        Console.WriteLine("Pressione qualquer tecla para continuar...");
+        Console.ReadKey();
     }
     else if (intOpcao == 4)
     {
         emprestimo.Emprestar();
+
+        Console.WriteLine("Pressione qualquer tecla para continuar...");
+        Console.ReadKey();
     }
     else if (intOpcao == 5)
     {
         emprestimo.Devolver();
 
+        Console.WriteLine("Pressione qualquer tecla para continuar...");
+        Console.ReadKey();
     }
     else if (intOpcao == 6)
     {
+        Console.Clear();
 
         bibliotecaDeJogos.ListarJogos();
 
         int opcaoRelatorio = Utilitarios.EscolherOpcao(bibliotecaDeJogos.ListaDeJogos.Count, "Deseja gerar relatório de qual jogo?");
+
+        Console.Clear();
+
         Jogo jogo = bibliotecaDeJogos.ListaDeJogos[opcaoRelatorio];
 
         if (jogo.UltimoMembroPegou != null)
@@ -72,16 +96,16 @@ while (true)
             Console.WriteLine("Esse jogo ainda não foi emprestado");
         }
 
+        Console.WriteLine("Pressione qualquer tecla para continuar...");
+        Console.ReadKey();
+            
     }
     else if (intOpcao == 0)
     {
         bibliotecaDeJogos.Salvar();
         listaDeMembros.SalvarEmJson();
         break;
-        
-    }
 
-    Console.WriteLine("Pressione qualquer teclapara continuar...");
-    Console.ReadKey();
+    }
 
 }
