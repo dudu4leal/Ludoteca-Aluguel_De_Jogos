@@ -32,12 +32,9 @@
   },
   {
     "Nome": "Spider Man PS4",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 80,
-    "MembroQuePegou": {
-      "NomePessoa": "Luiz Henrique",
-      "Cpf": "333.333.333-33"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "Luiz Henrique",
       "Cpf": "333.333.333-33"
@@ -45,7 +42,7 @@
     "DataEmprestimo": "2025-09-20T13:54:06.9324595-03:00",
     "UltimoEmprestimo": "2025-09-20T13:54:06.9324595-03:00",
     "DataDevolucaoEsperada": "2025-09-27T13:54:06.9324595-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-10-01T14:03:39.4492121-03:00"
   },
   {
     "Nome": "GTA V",
@@ -140,13 +137,13 @@
     "ValorDoAluguel": 99.90,
     "MembroQuePegou": null,
     "UltimoMembroPegou": {
-      "NomePessoa": "Arthur",
-      "Cpf": "911.041.577.72"
+      "NomePessoa": "Eduardo Leal",
+      "Cpf": "198.064.037.89"
     },
-    "DataEmprestimo": "2025-09-20T14:16:30.8034149-03:00",
-    "UltimoEmprestimo": "2025-09-20T14:16:30.8034149-03:00",
-    "DataDevolucaoEsperada": "2025-09-27T14:16:30.8034149-03:00",
-    "DataDevolucao": "2025-09-20T14:16:40.9324016-03:00"
+    "DataEmprestimo": "2025-09-21T14:00:38.4368714-03:00",
+    "UltimoEmprestimo": "2025-09-21T14:00:38.4368714-03:00",
+    "DataDevolucaoEsperada": "2025-09-28T14:00:38.4368714-03:00",
+    "DataDevolucao": "2025-10-01T14:01:51.375598-03:00"
   },
   {
     "Nome": "Mario Kart",
@@ -175,5 +172,47 @@
     "UltimoEmprestimo": "2025-09-20T14:27:01.838663-03:00",
     "DataDevolucaoEsperada": "2025-09-27T14:27:01.838663-03:00",
     "DataDevolucao": "2025-09-20T14:27:09.389473-03:00"
+  },
+  {
+    "Nome": "Minecraft",
+    "Emprestado": false,
+    "ValorDoAluguel": 25.90,
+    "MembroQuePegou": null,
+    "UltimoMembroPegou": null,
+    "DataEmprestimo": null,
+    "UltimoEmprestimo": null,
+    "DataDevolucaoEsperada": null,
+    "DataDevolucao": null
+  },
+  {
+    "Nome": "EA FC 26",
+    "Emprestado": true,
+    "ValorDoAluguel": 95.90,
+    "MembroQuePegou": {
+      "NomePessoa": "Arthur",
+      "Cpf": "911.041.577.72"
+    },
+    "UltimoMembroPegou": {
+      "NomePessoa": "Arthur",
+      "Cpf": "911.041.577.72"
+    },
+    "DataEmprestimo": "2025-10-01T14:03:00.5791521-03:00",
+    "UltimoEmprestimo": "2025-10-01T14:03:00.5791521-03:00",
+    "DataDevolucaoEsperada": "2025-10-08T14:03:00.5791521-03:00",
+    "DataDevolucao": null
+  },
+  {
+    "Nome": "FIFA 15",
+    "Emprestado": false,
+    "ValorDoAluguel": 50.99,
+    "MembroQuePegou": null,
+    "UltimoMembroPegou": {
+      "NomePessoa": "Lionel Messi",
+      "Cpf": "123.456.789-10"
+    },
+    "DataEmprestimo": "2025-09-21T13:59:22.2032946-03:00",
+    "UltimoEmprestimo": "2025-09-21T13:59:22.2032946-03:00",
+    "DataDevolucaoEsperada": "2025-09-28T13:59:22.2032946-03:00",
+    "DataDevolucao": "2025-09-21T13:59:47.5591932-03:00"
   }
 ]
