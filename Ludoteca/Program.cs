@@ -9,11 +9,12 @@ Emprestimo emprestimo = new Emprestimo(bibliotecaDeJogos, listaDeMembros);
 
 
 
-Console.WriteLine("==LUDOTECA==");
 
 while (true)
 {
     Console.Clear();
+
+    Console.WriteLine("==LUDOTECA==");
 
     Console.WriteLine("[1] Cadastrar jogo");
     Console.WriteLine("[2] Cadastrar membro");
@@ -42,6 +43,7 @@ while (true)
 
     if (intOpcao == 1)
     {
+        Console.Clear();
         bibliotecaDeJogos.AdicionarJogo();
 
         Console.WriteLine("Pressione qualquer tecla para continuar...");
@@ -49,6 +51,7 @@ while (true)
     }
     else if (intOpcao == 2)
     {
+        Console.Clear();
         listaDeMembros.CadastrarMembro();
 
         Console.WriteLine("Pressione qualquer tecla para continuar...");
@@ -56,6 +59,7 @@ while (true)
     }
     else if (intOpcao == 3)
     {
+        Console.Clear();
         bibliotecaDeJogos.ListarJogos();
 
         Console.WriteLine("Pressione qualquer tecla para continuar...");
@@ -67,9 +71,12 @@ while (true)
 
         Console.WriteLine("Pressione qualquer tecla para continuar...");
         Console.ReadKey();
+        Console.Clear();
+        
     }
     else if (intOpcao == 5)
     {
+        Console.Clear();
         emprestimo.Devolver();
 
         Console.WriteLine("Pressione qualquer tecla para continuar...");
@@ -98,7 +105,7 @@ while (true)
 
         Console.WriteLine("Pressione qualquer tecla para continuar...");
         Console.ReadKey();
-            
+
     }
     else if (intOpcao == 0)
     {

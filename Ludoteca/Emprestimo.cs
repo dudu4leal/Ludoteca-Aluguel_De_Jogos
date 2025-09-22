@@ -32,6 +32,7 @@ public class Emprestimo
 
         try
         {
+            Console.Clear();
             jogo.EmprestarPara(membro);
             bibliotecaDeJogos.Salvar();
             listaDeMembros.SalvarEmJson();
