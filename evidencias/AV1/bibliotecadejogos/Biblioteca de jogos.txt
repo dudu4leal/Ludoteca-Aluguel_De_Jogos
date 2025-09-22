@@ -1,0 +1,2 @@
+Biblioteca de jogos:
+A classe biblioteca de jogos é responsável por gerenciar uma lista de jogos, tendo nela o cadastro dos jogos e o armazenamentos dos mesmos. Essa classe: salva e carrega, adiciona ou remover algum jogo. além disso, permite listar os jogos que estão cadastrados. tudo isso usando o arquivo JSON para guardar dados.

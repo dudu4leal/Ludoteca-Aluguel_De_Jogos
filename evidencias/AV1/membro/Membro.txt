@@ -1,0 +1,3 @@
+Membro: 
+A classe membro é uma estrutura mais simples, definindo as características do membro na Ludoteca.
+Ela armazena a pessoa com o NomePessoa e CPF. Em resumo, essa classe é um modelo de dados, armazenando as propriedades essenciais.

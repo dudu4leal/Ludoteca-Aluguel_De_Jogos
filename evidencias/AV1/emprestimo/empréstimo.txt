@@ -1,0 +1,7 @@
+empréstimo:
+A classe empréstimo é a principal responsável pela lógica de emprestar e devolver jogos na Ludoteca. Ela coordena as ações entre as classes biblioteca de jogos e listas de membros.
+Principais funções:
+Gerar relatório: basicamente um relatório com o histórico do jogo.
+Gerar Multa: método que calcula o valor da multa em caso de atraso do usuário ou se ele devolveu na data correta.
+Devolver: permite que o usuário devolva o jogo.
+Emprestar: o usuário escolhe um jogo e um membro, dessa forma, realizando um empréstimo.

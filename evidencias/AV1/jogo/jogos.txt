@@ -1,0 +1,3 @@
+jogos:
+A classe jogo representa um item na biblioteca de jogos, armazenando informações daquele jogo.
+A classe jogo guarda: nome, valor do aluguel e o seu status atual, possui o método emprestarpara, e devolver para controlar as devoluções .Em síntese, a classe jogo é um molde.
