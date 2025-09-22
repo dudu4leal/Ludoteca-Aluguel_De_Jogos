@@ -9,7 +9,7 @@ Diagrama UML do projeto:
 
 Alunos:
 
-Arthur Rezende - 06010228
-Eduardo Leal - 06013706
-Pedro Freitas - 06009656
-Pedro Henrique Alves - 06003335
+Arthur Rezende - 06010228 |
+Eduardo Leal - 06013706 |
+Pedro Freitas - 06009656 |
+Pedro Henrique Alves - 06003335 
