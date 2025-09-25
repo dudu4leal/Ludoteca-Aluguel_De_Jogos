@@ -2,8 +2,6 @@ using Ludoteca;
 using System;
 using System.IO;
 using System.Globalization;
-using System.Linq;
-using System.Text.Json;
 
 
 public class Emprestimo
@@ -32,7 +30,6 @@ public class Emprestimo
 
         try
         {
-            Console.Clear();
             jogo.EmprestarPara(membro);
             bibliotecaDeJogos.Salvar();
             listaDeMembros.SalvarEmJson();

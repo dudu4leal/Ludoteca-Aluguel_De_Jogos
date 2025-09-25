@@ -67,11 +67,11 @@ while (true)
     }
     else if (intOpcao == 4)
     {
+        Console.Clear();
         emprestimo.Emprestar();
 
         Console.WriteLine("Pressione qualquer tecla para continuar...");
         Console.ReadKey();
-        Console.Clear();
         
     }
     else if (intOpcao == 5)
