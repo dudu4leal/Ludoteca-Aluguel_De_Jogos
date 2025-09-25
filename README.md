@@ -1,7 +1,7 @@
 # Ludoteca-Aluguel_De_Jogos
 Repositório criado para realização do nosso trabalho de POO da faculdade.
 
-Link do vídeo de demonstração: https://youtu.be/CszxI4B_BLM
+Link do vídeo de demonstração: https://youtu.be/gBcEy3WZoes
 
 Diagrama UML do projeto:
 
