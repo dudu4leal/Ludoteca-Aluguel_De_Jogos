@@ -1,12 +1,9 @@
 [
   {
     "Nome": "FIFA 25",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 50,
-    "MembroQuePegou": {
-      "NomePessoa": "Eduardo Leal",
-      "Cpf": "198.064.037.89"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "Eduardo Leal",
       "Cpf": "198.064.037.89"
@@ -14,7 +11,7 @@
     "DataEmprestimo": "2025-09-20T14:13:44.2358416-03:00",
     "UltimoEmprestimo": "2025-09-20T14:13:44.2358416-03:00",
     "DataDevolucaoEsperada": "2025-09-27T14:13:44.2358416-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-09-26T17:23:11.6508333-03:00"
   },
   {
     "Nome": "Rainbow Six Siege",
@@ -46,12 +43,9 @@
   },
   {
     "Nome": "GTA V",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 90,
-    "MembroQuePegou": {
-      "NomePessoa": "Eduardo Leal",
-      "Cpf": "198.064.037.89"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "Eduardo Leal",
       "Cpf": "198.064.037.89"
@@ -59,16 +53,13 @@
     "DataEmprestimo": "2025-09-20T14:01:16.2647032-03:00",
     "UltimoEmprestimo": "2025-09-20T14:01:16.2647032-03:00",
     "DataDevolucaoEsperada": "2025-09-27T14:01:16.2647032-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-09-26T17:23:36.3208084-03:00"
   },
   {
     "Nome": "Call Of Duty",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 65,
-    "MembroQuePegou": {
-      "NomePessoa": "Br\u00E1ulio da Silva",
-      "Cpf": "123.456.789-10"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "Br\u00E1ulio da Silva",
       "Cpf": "123.456.789-10"
@@ -76,7 +67,7 @@
     "DataEmprestimo": "2025-09-22T11:01:55.9161341-03:00",
     "UltimoEmprestimo": "2025-09-22T11:01:55.9161341-03:00",
     "DataDevolucaoEsperada": "2025-09-29T11:01:55.9161341-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-09-26T17:23:40.5532615-03:00"
   },
   {
     "Nome": "Super Mario Bros",
@@ -94,12 +85,9 @@
   },
   {
     "Nome": "The Last of Us",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 54.90,
-    "MembroQuePegou": {
-      "NomePessoa": "Luiz Henrique",
-      "Cpf": "333.333.333-33"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "Luiz Henrique",
       "Cpf": "333.333.333-33"
@@ -107,16 +95,13 @@
     "DataEmprestimo": "2025-09-22T10:57:14.7211231-03:00",
     "UltimoEmprestimo": "2025-09-22T10:57:14.7211231-03:00",
     "DataDevolucaoEsperada": "2025-09-29T10:57:14.7211231-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-09-26T17:23:50.3294459-03:00"
   },
   {
     "Nome": "Gran Turismo",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 69.90,
-    "MembroQuePegou": {
-      "NomePessoa": "Eduardo Leal",
-      "Cpf": "198.064.037.89"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "Eduardo Leal",
       "Cpf": "198.064.037.89"
@@ -124,16 +109,13 @@
     "DataEmprestimo": "2025-09-25T12:07:08.1563532-03:00",
     "UltimoEmprestimo": "2025-09-25T12:07:08.1563532-03:00",
     "DataDevolucaoEsperada": "2025-10-02T12:07:08.1563532-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-09-26T17:23:53.9289046-03:00"
   },
   {
     "Nome": "God of War Ragnarok",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 85.90,
-    "MembroQuePegou": {
-      "NomePessoa": "David Beckham",
-      "Cpf": "456-424-789-10"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "David Beckham",
       "Cpf": "456-424-789-10"
@@ -141,16 +123,13 @@
     "DataEmprestimo": "2025-09-25T12:04:11.6531183-03:00",
     "UltimoEmprestimo": "2025-09-25T12:04:11.6531183-03:00",
     "DataDevolucaoEsperada": "2025-10-02T12:04:11.6531183-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-09-26T17:23:57.23309-03:00"
   },
   {
     "Nome": "FIFA World Cup 2014",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 99.90,
-    "MembroQuePegou": {
-      "NomePessoa": "Ian",
-      "Cpf": "999.999.999-99"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "Ian",
       "Cpf": "999.999.999-99"
@@ -158,16 +137,13 @@
     "DataEmprestimo": "2025-09-22T11:09:48.7064232-03:00",
     "UltimoEmprestimo": "2025-09-22T11:09:48.7064232-03:00",
     "DataDevolucaoEsperada": "2025-09-29T11:09:48.7064232-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-09-26T17:24:06.2178424-03:00"
   },
   {
     "Nome": "Mario Kart",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 15.99,
-    "MembroQuePegou": {
-      "NomePessoa": "David Beckham",
-      "Cpf": "456-424-789-10"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "David Beckham",
       "Cpf": "456-424-789-10"
@@ -175,7 +151,7 @@
     "DataEmprestimo": "2025-09-22T11:01:05.8593443-03:00",
     "UltimoEmprestimo": "2025-09-22T11:01:05.8593443-03:00",
     "DataDevolucaoEsperada": "2025-09-29T11:01:05.8593443-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-09-26T17:24:14.0578622-03:00"
   },
   {
     "Nome": "Read Dead Redemption II",
@@ -204,12 +180,9 @@
   },
   {
     "Nome": "EA FC 26",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 95.90,
-    "MembroQuePegou": {
-      "NomePessoa": "Arthur",
-      "Cpf": "911.041.577.72"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "Arthur",
       "Cpf": "911.041.577.72"
@@ -217,16 +190,13 @@
     "DataEmprestimo": "2025-10-01T14:03:00.5791521-03:00",
     "UltimoEmprestimo": "2025-10-01T14:03:00.5791521-03:00",
     "DataDevolucaoEsperada": "2025-10-08T14:03:00.5791521-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-09-26T17:24:29.8901901-03:00"
   },
   {
     "Nome": "FIFA 15",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 50.99,
-    "MembroQuePegou": {
-      "NomePessoa": "C\u00E9sar Silva",
-      "Cpf": "888.888.888-88"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "C\u00E9sar Silva",
       "Cpf": "888.888.888-88"
@@ -234,16 +204,13 @@
     "DataEmprestimo": "2025-09-22T10:54:35.8965567-03:00",
     "UltimoEmprestimo": "2025-09-22T10:54:35.8965567-03:00",
     "DataDevolucaoEsperada": "2025-09-29T10:54:35.8965567-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-09-26T17:24:34.4985878-03:00"
   },
   {
     "Nome": "GTA San Andreas",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 100,
-    "MembroQuePegou": {
-      "NomePessoa": "Pedro Freitas",
-      "Cpf": "222.222.222-22"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "Pedro Freitas",
       "Cpf": "222.222.222-22"
@@ -251,16 +218,13 @@
     "DataEmprestimo": "2025-09-22T10:49:00.2710106-03:00",
     "UltimoEmprestimo": "2025-09-22T10:49:00.2710106-03:00",
     "DataDevolucaoEsperada": "2025-09-29T10:49:00.2710106-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-09-26T17:24:36.706138-03:00"
   },
   {
     "Nome": "PES 2013",
-    "Emprestado": true,
+    "Emprestado": false,
     "ValorDoAluguel": 65.90,
-    "MembroQuePegou": {
-      "NomePessoa": "Br\u00E1ulio da Silva",
-      "Cpf": "123.456.789-10"
-    },
+    "MembroQuePegou": null,
     "UltimoMembroPegou": {
       "NomePessoa": "Br\u00E1ulio da Silva",
       "Cpf": "123.456.789-10"
@@ -268,7 +232,7 @@
     "DataEmprestimo": "2025-09-22T11:10:03.6919296-03:00",
     "UltimoEmprestimo": "2025-09-22T11:10:03.6919296-03:00",
     "DataDevolucaoEsperada": "2025-09-29T11:10:03.6919296-03:00",
-    "DataDevolucao": null
+    "DataDevolucao": "2025-09-26T17:24:42.6487586-03:00"
   },
   {
     "Nome": "Spider Man Miles Morales",
@@ -283,5 +247,19 @@
     "UltimoEmprestimo": "2025-09-25T11:57:49.7703723-03:00",
     "DataDevolucaoEsperada": "2025-10-02T11:57:49.7703723-03:00",
     "DataDevolucao": "2025-09-25T11:57:57.3195822-03:00"
+  },
+  {
+    "Nome": "Star Wars: Jedi Fallen Order",
+    "Emprestado": false,
+    "ValorDoAluguel": 88.90,
+    "MembroQuePegou": null,
+    "UltimoMembroPegou": {
+      "NomePessoa": "Patricia Bender",
+      "Cpf": "123.456.789-10"
+    },
+    "DataEmprestimo": "2025-09-26T17:25:01.3861552-03:00",
+    "UltimoEmprestimo": "2025-09-26T17:25:01.3861552-03:00",
+    "DataDevolucaoEsperada": "2025-10-03T17:25:01.3861552-03:00",
+    "DataDevolucao": "2025-09-26T17:25:05.7619307-03:00"
   }
 ]
