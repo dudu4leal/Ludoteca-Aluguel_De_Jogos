@@ -3,9 +3,8 @@ Repositório criado para realização do nosso trabalho de POO da faculdade.
 
 Link do vídeo de demonstração: https://youtu.be/gBcEy3WZoes
 
-Diagrama UML do projeto:
+Diagrama UML do projeto: [clique aqui](https://github.com/user-attachments/files/22567302/diagrama-classe_.1.1.pdf)
 
-![Diagrama-UML](https://github.com/user-attachments/assets/c9b4773c-539e-4867-b360-22b5d0c27ce8)
 
 Alunos:
 
